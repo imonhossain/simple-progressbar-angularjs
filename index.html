@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="shopupTestApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Progress Bar</title>
+    <script src="assets/js/angular.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body ng-controller="ProgressBarController">
+    <div class="shopup-progress-bar">
+        <input type="range" min="0" max="100" ng-model="rangeFirst">
+        <input type="range" min="0" max="100" ng-model="rangeSecond">
+        <h1>{{ rangeFirst + rangeSecond  }}</h1>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <progress max="100" value="{{ progressFirst }}" ></progress>
+    <progress max="100" value="{{ progressSecond }}"></progress>
+    <h1>{{ progressFirst + progressSecond  }}</h1>
+</body>
+</html>
